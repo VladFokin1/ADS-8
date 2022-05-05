@@ -29,7 +29,7 @@ int Train::getLength() {
   current = first;
   bool flag = true;
   while (flag) {
-    c = 1;
+    int c = 1;
     current = current->next;
     countOp++;
     while(!current->light) {
@@ -39,7 +39,7 @@ int Train::getLength() {
     }
     current->light = false;
     length = c;
-    while(count--) {
+    while(c--) {
       current = current->prev;
       countOp++;
     }
